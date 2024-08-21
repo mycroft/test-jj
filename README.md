@@ -30,3 +30,20 @@ $ jj describe -m "creating a basic README"
 Working copy now at: unsmxwsn 552a06d1 creating a basic README
 Parent commit      : zzzzzzzz 00000000 (empty) (no description set)
 ```
+
+Sharing the working copy on github:
+
+```sh
+$ jj git remote add origin git@github.com:mycroft/test-jj.git
+$ jj branch set trunk --allow-backwards
+Created 1 branches pointing to unsmxwsn 75d5fa62 trunk | creating a basic README
+Hint: Consider using `jj branch move` if your intention was to move existing branches.
+$ jj git push
+Branch changes to push to origin:
+  Add branch trunk to 75d5fa62e3cf
+Warning: The working-copy commit in workspace 'default' became immutable, so a new commit has been created on top of it.
+Working copy now at: vnwzwwsn f2a1594d (empty) (no description set)
+Parent commit      : unsmxwsn 75d5fa62 trunk | creating a basic README
+```
+
+As work was shared/pushed to github, a new working copy is created.
