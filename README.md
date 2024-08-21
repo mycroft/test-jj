@@ -46,6 +46,18 @@ Working copy now at: vnwzwwsn f2a1594d (empty) (no description set)
 Parent commit      : unsmxwsn 75d5fa62 trunk | creating a basic README
 ```
 
+Updating with a new commit
+
+```sh
+$ jj new
+$ jj describe -m README: updating trunk/github"
+... updating README ...
+$ jj squash
+! will not work as parent commit is immutable (was pushed to git!)
+$ jj branch set trunk
+Moved 1 branches to zxkqtlpv fb9d5a5b trunk* | README: updating trunk/github
+```
+
 As work was shared/pushed to github, a new working copy is created.
 
 
