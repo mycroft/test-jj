@@ -56,6 +56,12 @@ $ jj squash
 ! will not work as parent commit is immutable (was pushed to git!)
 $ jj branch set trunk
 Moved 1 branches to zxkqtlpv fb9d5a5b trunk* | README: updating trunk/github
+$ jj git push
+Branch changes to push to origin:
+  Move forward branch trunk from c077201cc545 to 8a31d71ba508
+Warning: The working-copy commit in workspace 'default' became immutable, so a new commit has been created on top of it.
+Working copy now at: zklmpuzq f878d686 (empty) (no description set)
+Parent commit      : zxkqtlpv 8a31d71b trunk | README: updating trunk/github
 ```
 
 As work was shared/pushed to github, a new working copy is created.
