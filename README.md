@@ -47,3 +47,19 @@ Parent commit      : unsmxwsn 75d5fa62 trunk | creating a basic README
 ```
 
 As work was shared/pushed to github, a new working copy is created.
+
+
+## Squash workflow
+
+The workflow works like this:
+
+* set a description about what's to be done
+  - `jj describe -m "README: describing squash workflow"`
+* create a new working copy
+  - `jj new`
+  - At this moment, the parent commit will be empty (ie: no diff)
+* once work is complete, squash the working commit into the parent commit.
+  - `jj squash`
+
+As squash will merge current changes into the parent commit, it is possible to do that multiple time! The parent commit will not change (unlike the git's commit id obviously). `jj squash` works as `git commit --amend`.
+
